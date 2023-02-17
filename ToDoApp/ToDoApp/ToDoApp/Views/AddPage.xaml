@@ -7,11 +7,13 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout Padding="15">
-            <Label Text="Nombre" FontSize="Medium" TextColor="#e74c3c"></Label>
+            <Label Text="Nombre"
+                   FontSize="Medium"
+                   TextColor="{StaticResource colorPrimary}"></Label>
             <Entry x:Name="nombre"></Entry>
             <Label Text="Descripcion"
                    FontSize="Medium"
-                   TextColor="#e74c3c"></Label>
+                   TextColor="{StaticResource colorPrimaryDark}"></Label>
             <Editor x:Name="descripcion" HeightRequest="200"></Editor>
         </StackLayout>
     </ContentPage.Content>
