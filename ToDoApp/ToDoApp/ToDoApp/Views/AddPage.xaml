@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ToDoApp.Views.AddPage">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Guardar" x:Name="BtnGuardar"/>
+        <ToolbarItem Text="Guardar" x:Name="BtnGuardar" Clicked="BtnGuardar_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout Padding="15">

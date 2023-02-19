@@ -9,7 +9,8 @@ namespace ToDoApp
     public partial class App : Application
     {
 
-        //propiedad  static (paa poder acceder a ella dentro de todo el aplicativo) para inicializar la bd al inicar app
+        //Iniciamos creando la propiedad  DatabaseCOntext para poder inicializar el cotexto de la BD
+        //metodo static (paa poder acceder a ella dentro de todo el aplicativo) para inicializar la bd al inicar app
         public static DatabaseContext Context { get; set; }
         public App()
         {
@@ -26,12 +27,13 @@ namespace ToDoApp
             // obtenemos la carpta de la app y al folder donde estan los datos de la aplicacion local
             //ruta donde ira la bd
             var folderApp = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-            //ruta de system de la ruta de folder app, sumando la bd(ToDo) y db3 es la extension de sqLite
+            //Tambien se ocupa la ruta de system de la ruta de folder app, sumando la bd(ToDo) y db3 es la extension de sqLite
             var dbPath = System.IO.Path.Combine(folderApp, "ToDo.db3");
 
-            //Ya teneindo la ruta, vamos a inicializar la propiedad COntext
+            //Ya teneindo la ruta, vamos a inicializar la propiedad COntext establecida arriba
             //Y la inicializamos, enviando la ruta de la bd
             Context = new DatabaseContext(dbPath);
+            //Con esto ya tenemos la inicializacion de nuestra BD y toda la configuracion necesaria para poder  utilizar BD locales
         }
 
         protected override void OnStart()

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ToDoApp.Models
 {
-    class ToDoItem
+    public class ToDoItem
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
